@@ -7,13 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		851F1C302A9DD3D000F12B61 /* WallpaperListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851F1C2F2A9DD3D000F12B61 /* WallpaperListView.swift */; };
+		851F1C322A9ED5C300F12B61 /* WallpaperDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851F1C312A9ED5C300F12B61 /* WallpaperDetailView.swift */; };
+		851F1C342AA1412000F12B61 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851F1C332AA1412000F12B61 /* LoginView.swift */; };
+		851F1C352AA2A70B00F12B61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 855481BC296C23DC00D03E79 /* Assets.xcassets */; };
+		853A67472971F30700B7B5E7 /* NativeWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853A67462971F30700B7B5E7 /* NativeWidgetView.swift */; };
+		853A674B29729B3F00B7B5E7 /* WidgetWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853A674A29729B3F00B7B5E7 /* WidgetWindow.swift */; };
+		85409678296FE3AE00B8BA3F /* WallpaperWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85409677296FE3AE00B8BA3F /* WallpaperWindow.swift */; };
+		8540967A296FE76100B8BA3F /* DynamicWallpaperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85409679296FE76100B8BA3F /* DynamicWallpaperView.swift */; };
+		8540967E2970058F00B8BA3F /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8540967D2970058E00B8BA3F /* video.mp4 */; };
+		854CCC592A192BF400B20579 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854CCC582A192BF400B20579 /* WidgetView.swift */; };
+		854CCC5B2A192CCE00B20579 /* WidgetHTML.html in Resources */ = {isa = PBXBuildFile; fileRef = 854CCC5A2A192CCE00B20579 /* WidgetHTML.html */; };
+		854CCC5D2A193F3C00B20579 /* WidgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854CCC5C2A193F3C00B20579 /* WidgetViewController.swift */; };
 		855481B9296C23DA00D03E79 /* TrimensionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855481B8296C23DA00D03E79 /* TrimensionApp.swift */; };
 		855481BB296C23DA00D03E79 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855481BA296C23DA00D03E79 /* ContentView.swift */; };
-		855481BD296C23DC00D03E79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 855481BC296C23DC00D03E79 /* Assets.xcassets */; };
 		855481C0296C23DC00D03E79 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 855481BF296C23DC00D03E79 /* Preview Assets.xcassets */; };
 		855481CB296C23DC00D03E79 /* TrimensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855481CA296C23DC00D03E79 /* TrimensionTests.swift */; };
 		855481D5296C23DC00D03E79 /* TrimensionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855481D4296C23DC00D03E79 /* TrimensionUITests.swift */; };
 		855481D7296C23DC00D03E79 /* TrimensionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855481D6296C23DC00D03E79 /* TrimensionUITestsLaunchTests.swift */; };
+		8555A7422976811400195DE6 /* WidgetWindowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555A7412976811400195DE6 /* WidgetWindowDelegate.swift */; };
+		856E2E4A2A9C63F90083C589 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 856E2E492A9C63F90083C589 /* Supabase */; };
+		858BB4E62A2720B7009BEEEA /* AppleMusicWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858BB4E52A2720B7009BEEEA /* AppleMusicWidget.swift */; };
+		859B0E0B2A25D69D0025E8D6 /* WidgetJS.js in Resources */ = {isa = PBXBuildFile; fileRef = 859B0E0A2A25D69D0025E8D6 /* WidgetJS.js */; };
+		859B0E0D2A25D6F20025E8D6 /* WidgetCSS.css in Resources */ = {isa = PBXBuildFile; fileRef = 859B0E0C2A25D6F20025E8D6 /* WidgetCSS.css */; };
+		859E593E2AAA486E00BBAE11 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859E593D2AAA486E00BBAE11 /* Models.swift */; };
+		859E59402AAA5D1E00BBAE11 /* SupabaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859E593F2AAA5D1E00BBAE11 /* SupabaseProvider.swift */; };
+		85A0C2FA2A3A0C0E00AE32FA /* DummyThumbnails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A0C2F92A3A0C0E00AE32FA /* DummyThumbnails.swift */; };
+		85A0C2FC2A3C889600AE32FA /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A0C2FB2A3C889500AE32FA /* Sidebar.swift */; };
+		85A0C2FE2A58666D00AE32FA /* lines.svg in Resources */ = {isa = PBXBuildFile; fileRef = 85A0C2FD2A58666D00AE32FA /* lines.svg */; };
+		85DD73F12A2A058300A33DB2 /* video2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 85DD73CB2A2A04CA00A33DB2 /* video2.mp4 */; };
+		85ED424D2ABBCAB9000FDE6F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED424C2ABBCAB9000FDE6F /* ProfileView.swift */; };
+		85ED424F2ABF98D9000FDE6F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED424E2ABF98D9000FDE6F /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +58,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		851F1C2F2A9DD3D000F12B61 /* WallpaperListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperListView.swift; sourceTree = "<group>"; };
+		851F1C312A9ED5C300F12B61 /* WallpaperDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperDetailView.swift; sourceTree = "<group>"; };
+		851F1C332AA1412000F12B61 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		853A67462971F30700B7B5E7 /* NativeWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeWidgetView.swift; sourceTree = "<group>"; };
+		853A674A29729B3F00B7B5E7 /* WidgetWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetWindow.swift; sourceTree = "<group>"; };
+		85409677296FE3AE00B8BA3F /* WallpaperWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperWindow.swift; sourceTree = "<group>"; };
+		85409679296FE76100B8BA3F /* DynamicWallpaperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicWallpaperView.swift; sourceTree = "<group>"; };
+		8540967D2970058E00B8BA3F /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
+		854CCC582A192BF400B20579 /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
+		854CCC5A2A192CCE00B20579 /* WidgetHTML.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = WidgetHTML.html; sourceTree = "<group>"; };
+		854CCC5C2A193F3C00B20579 /* WidgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetViewController.swift; sourceTree = "<group>"; };
 		855481B5296C23DA00D03E79 /* Trimension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trimension.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		855481B8296C23DA00D03E79 /* TrimensionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimensionApp.swift; sourceTree = "<group>"; };
 		855481BA296C23DA00D03E79 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +80,18 @@
 		855481D0296C23DC00D03E79 /* TrimensionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrimensionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		855481D4296C23DC00D03E79 /* TrimensionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimensionUITests.swift; sourceTree = "<group>"; };
 		855481D6296C23DC00D03E79 /* TrimensionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimensionUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8555A7412976811400195DE6 /* WidgetWindowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetWindowDelegate.swift; sourceTree = "<group>"; };
+		858BB4E52A2720B7009BEEEA /* AppleMusicWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicWidget.swift; sourceTree = "<group>"; };
+		859B0E0A2A25D69D0025E8D6 /* WidgetJS.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = WidgetJS.js; sourceTree = "<group>"; };
+		859B0E0C2A25D6F20025E8D6 /* WidgetCSS.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = WidgetCSS.css; sourceTree = "<group>"; };
+		859E593D2AAA486E00BBAE11 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		859E593F2AAA5D1E00BBAE11 /* SupabaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseProvider.swift; sourceTree = "<group>"; };
+		85A0C2F92A3A0C0E00AE32FA /* DummyThumbnails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyThumbnails.swift; sourceTree = "<group>"; };
+		85A0C2FB2A3C889500AE32FA /* Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
+		85A0C2FD2A58666D00AE32FA /* lines.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lines.svg; sourceTree = "<group>"; };
+		85DD73CB2A2A04CA00A33DB2 /* video2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video2.mp4; sourceTree = "<group>"; };
+		85ED424C2ABBCAB9000FDE6F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		85ED424E2ABF98D9000FDE6F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				856E2E4A2A9C63F90083C589 /* Supabase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +120,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		851F1C2E2A9DD3B100F12B61 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				85A0C2FB2A3C889500AE32FA /* Sidebar.swift */,
+				855481BA296C23DA00D03E79 /* ContentView.swift */,
+				851F1C2F2A9DD3D000F12B61 /* WallpaperListView.swift */,
+				851F1C312A9ED5C300F12B61 /* WallpaperDetailView.swift */,
+				851F1C332AA1412000F12B61 /* LoginView.swift */,
+				85ED424C2ABBCAB9000FDE6F /* ProfileView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		855481AC296C23DA00D03E79 = {
 			isa = PBXGroup;
 			children = (
@@ -95,11 +156,29 @@
 		855481B7296C23DA00D03E79 /* Trimension */ = {
 			isa = PBXGroup;
 			children = (
+				851F1C2E2A9DD3B100F12B61 /* Views */,
+				85DD73CB2A2A04CA00A33DB2 /* video2.mp4 */,
+				8540967D2970058E00B8BA3F /* video.mp4 */,
 				855481B8296C23DA00D03E79 /* TrimensionApp.swift */,
-				855481BA296C23DA00D03E79 /* ContentView.swift */,
 				855481BC296C23DC00D03E79 /* Assets.xcassets */,
 				855481C1296C23DC00D03E79 /* Trimension.entitlements */,
 				855481BE296C23DC00D03E79 /* Preview Content */,
+				85409677296FE3AE00B8BA3F /* WallpaperWindow.swift */,
+				85409679296FE76100B8BA3F /* DynamicWallpaperView.swift */,
+				853A67462971F30700B7B5E7 /* NativeWidgetView.swift */,
+				853A674A29729B3F00B7B5E7 /* WidgetWindow.swift */,
+				8555A7412976811400195DE6 /* WidgetWindowDelegate.swift */,
+				854CCC582A192BF400B20579 /* WidgetView.swift */,
+				854CCC5A2A192CCE00B20579 /* WidgetHTML.html */,
+				854CCC5C2A193F3C00B20579 /* WidgetViewController.swift */,
+				859B0E0A2A25D69D0025E8D6 /* WidgetJS.js */,
+				859B0E0C2A25D6F20025E8D6 /* WidgetCSS.css */,
+				85A0C2FD2A58666D00AE32FA /* lines.svg */,
+				858BB4E52A2720B7009BEEEA /* AppleMusicWidget.swift */,
+				85A0C2F92A3A0C0E00AE32FA /* DummyThumbnails.swift */,
+				859E593D2AAA486E00BBAE11 /* Models.swift */,
+				859E593F2AAA5D1E00BBAE11 /* SupabaseProvider.swift */,
+				85ED424E2ABF98D9000FDE6F /* Extensions.swift */,
 			);
 			path = Trimension;
 			sourceTree = "<group>";
@@ -145,6 +224,9 @@
 			dependencies = (
 			);
 			name = Trimension;
+			packageProductDependencies = (
+				856E2E492A9C63F90083C589 /* Supabase */,
+			);
 			productName = Trimension;
 			productReference = 855481B5296C23DA00D03E79 /* Trimension.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +299,9 @@
 				Base,
 			);
 			mainGroup = 855481AC296C23DA00D03E79;
+			packageReferences = (
+				856E2E482A9C63F90083C589 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			productRefGroup = 855481B6296C23DA00D03E79 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,8 +318,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85DD73F12A2A058300A33DB2 /* video2.mp4 in Resources */,
+				859B0E0B2A25D69D0025E8D6 /* WidgetJS.js in Resources */,
+				85A0C2FE2A58666D00AE32FA /* lines.svg in Resources */,
+				859B0E0D2A25D6F20025E8D6 /* WidgetCSS.css in Resources */,
 				855481C0296C23DC00D03E79 /* Preview Assets.xcassets in Resources */,
-				855481BD296C23DC00D03E79 /* Assets.xcassets in Resources */,
+				8540967E2970058F00B8BA3F /* video.mp4 in Resources */,
+				851F1C352AA2A70B00F12B61 /* Assets.xcassets in Resources */,
+				854CCC5B2A192CCE00B20579 /* WidgetHTML.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +350,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				858BB4E62A2720B7009BEEEA /* AppleMusicWidget.swift in Sources */,
 				855481BB296C23DA00D03E79 /* ContentView.swift in Sources */,
+				859E59402AAA5D1E00BBAE11 /* SupabaseProvider.swift in Sources */,
+				853A674B29729B3F00B7B5E7 /* WidgetWindow.swift in Sources */,
+				851F1C342AA1412000F12B61 /* LoginView.swift in Sources */,
+				853A67472971F30700B7B5E7 /* NativeWidgetView.swift in Sources */,
+				8555A7422976811400195DE6 /* WidgetWindowDelegate.swift in Sources */,
+				85ED424F2ABF98D9000FDE6F /* Extensions.swift in Sources */,
+				8540967A296FE76100B8BA3F /* DynamicWallpaperView.swift in Sources */,
+				85409678296FE3AE00B8BA3F /* WallpaperWindow.swift in Sources */,
+				854CCC592A192BF400B20579 /* WidgetView.swift in Sources */,
+				85ED424D2ABBCAB9000FDE6F /* ProfileView.swift in Sources */,
+				851F1C322A9ED5C300F12B61 /* WallpaperDetailView.swift in Sources */,
+				854CCC5D2A193F3C00B20579 /* WidgetViewController.swift in Sources */,
+				859E593E2AAA486E00BBAE11 /* Models.swift in Sources */,
+				85A0C2FA2A3A0C0E00AE32FA /* DummyThumbnails.swift in Sources */,
+				851F1C302A9DD3D000F12B61 /* WallpaperListView.swift in Sources */,
+				85A0C2FC2A3C889600AE32FA /* Sidebar.swift in Sources */,
 				855481B9296C23DA00D03E79 /* TrimensionApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +528,8 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Trimension/Preview Content\"";
+				DEVELOPMENT_TEAM = 974XCSH6VY;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -427,6 +537,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = app.trimension.Trimension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -445,6 +556,8 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Trimension/Preview Content\"";
+				DEVELOPMENT_TEAM = 974XCSH6VY;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -452,6 +565,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = app.trimension.Trimension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -568,6 +682,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		856E2E482A9C63F90083C589 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		856E2E492A9C63F90083C589 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 856E2E482A9C63F90083C589 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 855481AD296C23DA00D03E79 /* Project object */;
 }
