@@ -1,14 +1,16 @@
 import SwiftUI
+import Appwrite
+import AppwriteModels
+import JSONCodable
 import SupabaseStorage
 import AVKit
 
 
-let query_wallpapers = SupabaseProvider.shared.supabaseClient.database.from("wallpaper")
+let query_wallpapers = SupabaseProvider.shared.client.database.from("wallpaper")
         .select(columns: """
                          id,
                          name,
                          description,
-                         preview_filename,
                          type,
                          user: user_id(name)
                          """)
@@ -37,18 +39,30 @@ struct WallpaperListView: View {
             SearchBar(text: _searchBarText)
             ScrollView(showsIndicators: false) {
                 LazyVGrid(columns: columns) {
-                    ForEach(wallpapers) { wallpaper in
+                    ForEach(#wallpapers) { #wallpaper in
                         NavigationLink {
-                            WallpaperDetailView(preview_filename: wallpaper.preview_filename, title: wallpaper.name, description: wallpaper.description, publisher: wallpaper.user.name)
+//                            WallpaperDetailView(preview_filename: wallpaper.preview_filename, title: wallpaper.name, description: wallpaper.description, publisher: wallpaper.user.name)
+                            WallpaperDetailView(id: wallpaper.id)
                                 .navigationBarBackButtonHidden()
                         } label: {
-                            switch wallpaper.type {
-                            case "bitmap":
-                                CardView(thumbnail: wallpaper.preview_filename, title: wallpaper.name, publisher: wallpaper.user.name)
-                            case "video":
-                                VideoCardView(thumbnail: wallpaper.preview_filename, title: wallpaper.name, publisher: wallpaper.user.name)
-                            default:
-                                EmptyView()
+                            let fileName = String(wallpaper.id)+"."+wallpaper.type
+                            if let type = UTType(filenameExtension: wallpaper.type) {
+                                if type.conforms(to: .image) {
+                                    CardView(thumbnail: fileName, title: wallpaper.name, publisher: wallpaper.user.name)
+                                }
+                                else if type.conforms(to: .movie) {
+                                    VideoCardView(thumbnail: fileName, title: wallpaper.name, publisher: wallpaper.user.name)
+                                }
+//                                switch type {
+//                                case (let a, _) where type.conforms(to: .image):
+//                                    CardView(thumbnail: wallpaper.preview_filename, title: wallpaper.name, publisher: wallpaper.user.name)
+//                                case "video":
+//                                    VideoCardView(thumbnail: wallpaper.preview_filename, title: wallpaper.name, publisher: wallpaper.user.name)
+//                                default:
+//                                    EmptyView()
+//                                }
+                            } else {
+                                Text("Nothing")
                             }
                             
                         }
@@ -106,7 +120,7 @@ struct CardView: View {
         .animation(.easeInOut(duration: 0.5), value: isHovered)
         .task {
             do {
-                let data = try await SupabaseProvider.shared.supabaseStorageClient.from(id: "wallpaper").download(path: thumbnail)
+                let data = try await SupabaseProvider.shared.storage.from(id: "wallpaper").download(path: thumbnail)
                 if let nsImage = NSImage(data: data) {
                     image = Image(nsImage: nsImage)
                 } else {
@@ -158,7 +172,7 @@ struct VideoCardView: View {
         .animation(.easeInOut(duration: 0.5), value: isHovered)
         .task {
             do {
-                let url = try SupabaseProvider.shared.supabaseStorageClient.from(id: "wallpaper").getPublicURL(path: thumbnail)
+                let url = try SupabaseProvider.shared.storage.from(id: "wallpaper").getPublicURL(path: thumbnail)
                 self.playerItem = AVPlayerItem(url: url)
             }
             catch {

@@ -14,21 +14,21 @@ class SupabaseProvider {
     
     static let shared = SupabaseProvider()
     
-    lazy var supabaseClient: SupabaseClient = {
+    lazy var client: SupabaseClient = {
         return SupabaseClient(supabaseURL: supabaseUrl, supabaseKey: apiKey, options: options)
     }()
     
-    lazy var supabaseStorageClient: SupabaseStorageClient = {
-        return supabaseClient.storage
+    lazy var storage: SupabaseStorageClient = {
+        return client.storage
     }()
     
     func isAuthenticated() async -> Bool {
-        let session = try? await SupabaseProvider.shared.supabaseClient.auth.session
+        let session = try? await SupabaseProvider.shared.client.auth.session
         return session != nil
     }
     
     func loggedInUserId() async -> UUID? {
-        return try? await SupabaseProvider.shared.supabaseClient.auth.session.user.id
+        return try? await SupabaseProvider.shared.client.auth.session.user.id
     }
     
 //    private var keysPlist: NSDictionary {

@@ -27,20 +27,25 @@ struct ContentView: View {
             VStack {
                 TabButton(image: "home", panel: .homepage, selection: $selection)
                     .frame(width: 30, height: 30)
-                    .padding()
+                    .padding(.vertical)
+                    .padding(.horizontal, 8)
                 TabButton(image: "wallpaper", panel: .wallpapers, selection: $selection)
                     .frame(width: 30, height: 30)
-                    .padding()
+                    .padding(.vertical)
+                    .padding(.horizontal, 8)
                 TabButton(image: "widget", panel: .widgets, selection: $selection)
                     .frame(width: 30, height: 30)
-                    .padding()
+                    .padding(.vertical)
+                    .padding(.horizontal, 8)
                 Spacer()
                 TabButton(image: "user", panel: .user, selection: $selection)
                     .frame(width: 30, height: 30)
-                    .padding()
+                    .padding(.vertical)
+                    .padding(.horizontal, 8)
                 TabButton(image: "settings", panel: .settings, selection: $selection)
                     .frame(width: 30, height: 30)
-                    .padding()
+                    .padding(.vertical)
+                    .padding(.horizontal, 8)
             }
             .padding()
             .background(BlurEffect(material: .menu).ignoresSafeArea())
@@ -54,7 +59,7 @@ struct ContentView: View {
                 WallpaperListView()
                     .environmentObject(sharedSearchBarText)
             case .widgets:
-                EmptyView()
+                UploadView()
             case .user:
                 if isAuthenticated {
                     if let userId = userId {
@@ -70,7 +75,7 @@ struct ContentView: View {
         .task {
             isAuthenticated = await SupabaseProvider.shared.isAuthenticated()
             userId = await SupabaseProvider.shared.loggedInUserId()
-            for await event in SupabaseProvider.shared.supabaseClient.auth.authEventChange {
+            for await event in SupabaseProvider.shared.client.auth.authEventChange {
                 if event == .signedIn {
                     isAuthenticated = true
                     userId = await SupabaseProvider.shared.loggedInUserId()
@@ -200,8 +205,8 @@ struct TabButton: View {
     }
 }
 
-class SearchBarText: ObservableObject {
-    @Published var text: String = ""
+class SearchBarText: ObservableObject { // TODO: upgrade to @Observable macro
+    var text: String = ""
 }
 
 struct SearchBar: View {

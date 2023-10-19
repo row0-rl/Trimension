@@ -12,8 +12,8 @@ struct ProfileView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 100, height: 100)
                 .clipShape(.circle)
-            if let user = user {
-                Text("Hello! \(user.name)")
+            if let user, let name = user.name {
+                Text("Hello! \(name)")
                     .font(.largeTitle)
                     .fontWeight(.bold)
             }
@@ -22,7 +22,7 @@ struct ProfileView: View {
             Button {
                 Task {
                     do {
-                        try await SupabaseProvider.shared.supabaseClient.auth.signOut()
+                        try await SupabaseProvider.shared.client.auth.signOut()
                     } catch {
                         print(error)
                     }
@@ -35,9 +35,9 @@ struct ProfileView: View {
         .frame(maxWidth: .infinity)
         .task {
             do {
-                user = try await SupabaseProvider.shared.supabaseClient.database.from("user").select().match(query: ["id": userId]).single().execute().value
+                user = try await SupabaseProvider.shared.client.database.from("user").select().match(query: ["id": userId]).single().execute().value
                 if let user = user {
-                    let data = try await SupabaseProvider.shared.supabaseStorageClient.from(id: "avatar").download(path: "avatar.jpeg")
+                    let data = try await SupabaseProvider.shared.storage.from(id: "avatar").download(path: "avatar.jpeg")
                     if let nsImage = NSImage(data: data) {
                         avatar = Image(nsImage: nsImage)
                     } else {

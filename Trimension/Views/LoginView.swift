@@ -11,7 +11,7 @@ struct LoginView: View {
     func login() {
         Task {
             do {
-                try await SupabaseProvider.shared.supabaseClient.auth.signIn(email: email, password: password)
+                try await SupabaseProvider.shared.client.auth.signIn(email: email, password: password)
             } catch {
                 if let goTrueError = error as? GoTrueError {
                     if goTrueError.errorDescription == "Invalid login credentials" {
@@ -121,7 +121,7 @@ struct RegisterView: View {
     func register() {
         Task {
             do {
-                try await SupabaseProvider.shared.supabaseClient.auth.signIn(email: email, password: password)
+                try await SupabaseProvider.shared.client.auth.signIn(email: email, password: password)
             } catch {
                 if let goTrueError = error as? GoTrueError {
                     if goTrueError.errorDescription == "Invalid login credentials" {
